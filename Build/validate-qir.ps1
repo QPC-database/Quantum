@@ -110,6 +110,9 @@ $qirProjects = @(
     # needs argument(s) #@{ Path = (Join-Path $PSScriptRoot .. samples simulation qaoa QAOA.csproj); Args = @() }
 )
 
+# TODO: 
+# This is a quick and dirty addition to restore the feature branch build to a working state.
+# It should be replace by a subsequent PR.
 if (-not (Get-Command qir-cli -ErrorAction SilentlyContinue)) {
     dotnet tool install Microsoft.Quantum.Qir.CommandLineTool -g
 }
