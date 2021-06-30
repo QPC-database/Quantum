@@ -114,7 +114,7 @@ $qirProjects = @(
 # This is a quick and dirty addition to restore the feature branch build to a working state.
 # It should be replace by a subsequent PR.
 if (-not (Get-Command qir-cli -ErrorAction SilentlyContinue)) {
-    dotnet tool install Microsoft.Quantum.Qir.CommandLineTool -g
+    dotnet tool install Microsoft.Quantum.Qir.CommandLineTool -g --version $Env:ASSEMBLY_VERSION-alpha
 }
 
 if (-not (Get-Command qir-cli -ErrorAction SilentlyContinue)) {
